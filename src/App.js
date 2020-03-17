@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import MovieInfo from './components/movieInfo';
 import MoviesScrollView from "./components/moviesScrollView";
+import movies from './movies';
 
 const App = () => {
-	const [currentMovie, setCurrentMovie] = useState({});
+	const [currentMovie, setCurrentMovie] = useState(movies[0]);
 	const [movies, setMovies] = useState([]);
 
 	useEffect(async () => {
