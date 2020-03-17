@@ -62,7 +62,8 @@ const MovieInfo = ({ movie }) => (
     <div
         className="description"
         style={{
-            backgroundImage: `url(${movie.background})`
+            backgroundImage: `url(${movie.background})`,
+            transition: 'background-image 0.5s ease-in-out'
         }}
     >
         <div className="filter">
