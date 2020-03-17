@@ -111,11 +111,14 @@
 @media (max-width: 954px) {
   .filter {
     flex-direction: column;
-    padding:0;
+    padding: 20px;
   }
   .description {
     grid-column: 1 / 13;
     padding: 20px;
+  }
+  .info {
+    margin-left: 0;
   }
   .card {
     grid-column: 1 / 13;
