@@ -8,7 +8,7 @@ const App = () => {
 	const [movies, setMovies] = useState([]);
 
 	useEffect(async () => {
-		let response = await fetch(`http://www.mocky.io/v2/5e70a22e30000029007a3047`);
+		let response = await fetch(`https://www.mocky.io/v2/5e70a22e30000029007a3047`);
 		let data = await response.json()
 		setCurrentMovie(data[0])
 		setMovies(data);
