@@ -6,7 +6,7 @@ import movies from './movies';
 
 const App = () => {
 	const [currentMovie, setCurrentMovie] = useState(movies[0]);
-	const [movies, setMovies] = useState([]);
+	//const [movies, setMovies] = useState([]);
 
 	useEffect(async () => {
 		let response = await fetch(`https://www.mocky.io/v2/5e70a22e30000029007a3047`);
