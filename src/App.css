@@ -120,4 +120,7 @@
   .card {
     grid-column: 1 / 13;
   }
+  .purchase-options {
+    margin-left: 0;
+  }
 }
