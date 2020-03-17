@@ -123,6 +123,9 @@
   .card {
     grid-column: 1 / 13;
   }
+  .card--content:hover {
+    transform: none;
+  }
   .purchase-options {
     margin-left: 0;
   }
