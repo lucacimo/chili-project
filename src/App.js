@@ -2,17 +2,21 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import MovieInfo from './components/movieInfo';
 import MoviesScrollView from "./components/moviesScrollView";
-import { movies } from './movies';
+//import { movies } from './movies';
 
 const App = () => {
-	const [currentMovie, setCurrentMovie] = useState(movies[0]);
-	//const [movies, setMovies] = useState([]);
+	const [currentMovie, setCurrentMovie] = useState({});
+	const [movies, setMovies] = useState([]);
 
-	useEffect(async () => {
-		let response = await fetch(`https://www.mocky.io/v2/5e70a22e30000029007a3047`);
-		let data = await response.json()
-		//setCurrentMovie(data[0])
-		//setMovies(data);
+	useEffect(() => {
+
+		const fetchData = async () => {
+			let response = await fetch(`https://www.mocky.io/v2/5e70a22e30000029007a3047`);
+			let data = await response.json()
+			setCurrentMovie(data[0])
+			setMovies(data);
+		  };
+		  fetchData();
 	}, []);
 
 	let View = Object.keys(currentMovie).length === 0 ? (

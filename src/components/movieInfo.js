@@ -6,7 +6,10 @@ const Info = ({ movieInfo }) => (
     <div className="info">
         <h1>{movieInfo.title}</h1>
         <div className="rating">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/400px-IMDB_Logo_2016.svg.png" />
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/400px-IMDB_Logo_2016.svg.png" 
+                alt="imdb-logo"
+            />
             <h4>{movieInfo.rating}</h4>
         </div>
         <h4>{movieInfo.genre}</h4>
