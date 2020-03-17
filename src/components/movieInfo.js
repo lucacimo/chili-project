@@ -24,8 +24,11 @@ const Info = ({ movieInfo }) => (
 )
 
 const PurchaseOptions = ({ price }) => {
-    const [likesCount, incrementCount] = useState(0);
+    const [likesCount, setCount] = useState(0);
     const [favColor, setFavColor] = useState('white');
+
+    const increment = () => setCount(likesCount + 1);
+    const decrement = () => setCount(likesCount - 1)
     return (
         <div className="purchase-options">
             <button className="button">
@@ -37,8 +40,8 @@ const PurchaseOptions = ({ price }) => {
             <button className="button">Blu Ray / Dvd</button>
             <div className="icons">
                 <div>
-                    <FontAwesomeIcon onClick={() => incrementCount(likesCount + 1)} size="2x" color="white" icon={faThumbsUp} />
-                    {likesCount > 0 ? <div style={{ color: 'white', textAlign: "center", marginTop: 10 }}>{likesCount}</div> : null}
+                    <FontAwesomeIcon onClick={() => likesCount > 0 ? decrement() : increment()} size="2x" color="white" icon={faThumbsUp} />
+                    {likesCount > 0 ? <div className="likesCount">{likesCount}</div> : null}
                 </div>
                 <FontAwesomeIcon onClick={() => favColor === 'white' ? setFavColor('red') : setFavColor('white')} size="2x" color={favColor} icon={faHeart} />
             </div>
