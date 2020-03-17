@@ -11,8 +11,8 @@ const App = () => {
 	useEffect(async () => {
 		let response = await fetch(`https://www.mocky.io/v2/5e70a22e30000029007a3047`);
 		let data = await response.json()
-		setCurrentMovie(data[0])
-		setMovies(data);
+		//setCurrentMovie(data[0])
+		//setMovies(data);
 	}, []);
 
 	let View = Object.keys(currentMovie).length === 0 ? (
