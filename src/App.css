@@ -11,6 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 1s ease-out;
 }
 
 .filter {
@@ -90,7 +91,9 @@
   height: 100%;
   width: 100%;
 }
-
+.carousel {
+  grid-column: 2/12;
+}
 .card {
   grid-column: 2 / 12;
   display: flex;
@@ -102,6 +105,7 @@
   min-width: 300px;
   margin: 5px;
   box-shadow: 3px 5px rgba(255, 255, 255, 0.05);
+  z-index: 100;
 }
 
 .card--content:hover {

@@ -26,7 +26,7 @@ const App = () => {
 		};
 		fetchData();
 	}, []);
-	
+
 	return (
 		<>
 			{isError && <div>Something went wrong ...</div>}
@@ -35,7 +35,10 @@ const App = () => {
 			) : (
 					<div className="container">
 						<MovieInfo movie={currentMovie} />
-						<MoviesScrollView movies={movies} setCurrentMovie={setCurrentMovie} />
+						<MoviesScrollView 
+							movies={movies} 
+							setCurrentMovie={setCurrentMovie} 
+						/>
 					</div>
 				)}
 		</>
