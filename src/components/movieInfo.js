@@ -45,7 +45,7 @@ const PurchaseOptions = ({ price }) => {
                 </div>
                 <FontAwesomeIcon onClick={() => favColor === 'white' ? setFavColor('red') : setFavColor('white')} size="2x" color={favColor} icon={faHeart} />
             </div>
-            <a href="#" style={{ color: "white" }}>
+            <a href="/" style={{ color: "white" }}>
                 SCOPRI DI PIÙ
         </a>
         </div>
