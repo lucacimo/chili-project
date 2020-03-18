@@ -54,7 +54,7 @@ const PurchaseOptions = ({ price }) => {
 
 const Cover = ({ cover }) => (
     <div className="cover">
-        <img src={cover} />
+        <img src={cover} alt="cover"/>
     </div>
 )
 
