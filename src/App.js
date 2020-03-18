@@ -36,6 +36,7 @@ const App = () => {
 					<div className="container">
 						<MovieInfo movie={currentMovie} />
 						<MoviesScrollView 
+							carousel
 							movies={movies} 
 							setCurrentMovie={setCurrentMovie} 
 						/>
